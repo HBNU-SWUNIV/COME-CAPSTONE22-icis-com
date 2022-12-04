@@ -15,12 +15,10 @@
   
 ## System Design
   - ### System Requirements
+  ![image](https://user-images.githubusercontent.com/81350489/205480727-04ce53bc-bc80-4c89-a22a-7732ada587b5.png)
+
     - OOO
-    - OOO
-    
-## Case Study
-  - ### Description
-  
+    - O  
   
 ## Conclusion
   - ### OOO
