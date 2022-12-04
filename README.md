@@ -28,7 +28,7 @@
 
   
 ## Conclusion
-  <img src="https://user-images.githubusercontent.com/81350489/205482478-ebd89a83-dc88-449d-ae41-fa0251095872.png" width=900>
+  <img src="https://user-images.githubusercontent.com/81350489/205482839-954171a7-7411-4761-a26a-51acaf8ad5b4.png" width=900>
   
   - 정형화된 MNIST 데이터를 활용하여 기존 인공지능 방식과 물리적으로 나눈 엣지 단말들에서 연합학습을 이용한 방식은 아래 그래프처럼 거의 근접한 성능을 보이는 것을 확인할 수 있다.
   <img src="https://user-images.githubusercontent.com/81350489/205482573-5451d137-8641-4d5e-a7c8-88e668263e71.png" width=900>
