@@ -1,0 +1,48 @@
+version: "3.3"
+
+services:
+  telegraf:
+    image: telegraf:1.3
+    networks:
+      - fl-net
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    configs:
+      - source: telegraf-config
+        target: /etc/telegraf/telegraf.conf
+    deploy:
+      restart_policy:
+        condition: on-failure
+      mode: global
+
+  influxdb:
+    image: influxdb:1.8.3
+    networks:
+      - fl-net
+    deploy:
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.role == manager
+
+  grafana:
+    image: grafana/grafana:4.3.2
+    ports:
+      - "3000:3000"
+    networks:
+      - fl-net
+    deploy:
+      restart_policy:
+        condition: on-failure
+      placement:
+        constraints:
+          - node.role == manager
+
+configs:
+  telegraf-config:
+    file: $PWD/conf/telegraf/telegraf.conf
+
+networks:
+  fl-net:
+    driver: overlay
